@@ -15,3 +15,4 @@ jordan = Person('jordan', 'jordan@aol.com', '495-586-3456')
 
 sonny.greet(jordan)
 jordan.greet(sonny)
+sonny.print_contact_info()
