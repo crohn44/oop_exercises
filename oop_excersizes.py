@@ -6,6 +6,9 @@ class Person:
         self.friends = []
         self.greeting_count = 0
 
+    def __str__(self):
+        return 'Name: {}\nEmail: {}\nPhone: {}'.format(self.name, self.email, self.phone)
+
     def greet(self, other_person):
         print('Hello {}, I am {}!'.format(other_person.name, self.name))
         self.greeting_count += 1
@@ -31,5 +34,4 @@ sonny.print_contact_info()
 jordan.add_friend(sonny)
 jordan.num_friends()
 jordan.greet(sonny)
-jordan.greet(sonny)
-jordan.greet(sonny)
+print(jordan)
