@@ -4,9 +4,12 @@ class Person:
         self.email = email
         self.phone = phone
         self.friends = []
+        self.greeting_count = 0
 
     def greet(self, other_person):
         print('Hello {}, I am {}!'.format(other_person.name, self.name))
+        self.greeting_count += 1
+        print(self.greeting_count)
 
     def print_contact_info(self):
         print("{}'s email: {}\n{}'s phone: {}".format(self.name, self.email, self.name, self.phone))
@@ -18,6 +21,7 @@ class Person:
         print(len(self.friends))
 
 
+
 sonny = Person('sonny', 'sonny@hotmail.com', '483-485-4948')
 jordan = Person('jordan', 'jordan@aol.com', '495-586-3456')
 
@@ -26,3 +30,6 @@ jordan.greet(sonny)
 sonny.print_contact_info()
 jordan.add_friend(sonny)
 jordan.num_friends()
+jordan.greet(sonny)
+jordan.greet(sonny)
+jordan.greet(sonny)
